@@ -1,9 +1,11 @@
 ---
+heading: Great coffee with a conscience
+subheading: Support sustainable farming while enjoying a cup
+backgrounds:
+  - image: /img/home-1-1025x664.jpg
 templateKey: index-page
 title: Great coffee with a conscience
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
 mainpitch:
   title: Why Kaldi
   description: >
@@ -16,11 +18,9 @@ description: >-
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
-backgrounds:
-  - image: /img/home-1-1025x664.jpg
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/home-1-1025x664.jpg
       text: >
         We sell green and roasted coffee beans that are sourced directly from
         independent farmers and farm cooperatives. We’re proud to offer a
