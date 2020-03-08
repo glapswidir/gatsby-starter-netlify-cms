@@ -16,6 +16,8 @@ description: >-
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
+backgrounds:
+  - image: /img/home-1-1025x664.jpg
 intro:
   blurbs:
     - image: /img/coffee.png
