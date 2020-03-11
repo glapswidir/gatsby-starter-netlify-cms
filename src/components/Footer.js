@@ -1,110 +1,71 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
-import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: '14em', height: '10em' }}
-          />
-        </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
+      <footer className="footer has-background-light has-text-grey">
+        <div className="container center">
+          <h2 className="is-size-1 is-uppercase">Registration form</h2>
+          <hr/>
+          <h4 className="is-size-6 is-uppercase is-8">Feel free to send us a message or ask a question.</h4>
+          <div className="columns">
+            <div className="column is-half">
+              <div className="field">
+                <div className="control">
+                  <input className="input is-medium" type="text" placeholder="Name"/>
+                </div>
               </div>
             </div>
+            <div className="column is-half">
+              <div className="field">
+                <div className="control">
+                  <input className="input is-medium" type="text" placeholder="Surname"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column is-half">
+              <div className="field">
+                <div className="control">
+                  <input className="input is-medium" type="text" placeholder="Medium input"/>
+                </div>
+              </div>
+            </div>
+            <div className="column is-half">
+              <div className="field">
+                <div className="control">
+                  <input className="input is-medium" type="text" placeholder="Medium input"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column is-full">
+              <div className="field">
+                <div className="control">
+                  <textarea className="textarea is-medium" placeholder="Medium textarea"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="form-button group-sm text-center are-medium">
+            <span/>
+            <button className="button button-primary" type="submit">Send</button>
+            <span/>
+            <button className="button button-default" type="reset">Clear</button>
+          </div>
+          <ul className="inline-list">
+            <li><a className="icon icon-creative novi-icon fa fa-google-plus" href="#"></a></li>
+            <li><a className="icon icon-creative novi-icon fa fa-pinterest" href="#"></a></li>
+            <li><a className="icon icon-creative novi-icon fa fa-twitter" href="#"></a></li>
+            <li><a className="icon icon-creative novi-icon fa fa-facebook" href="#"></a></li>
+          </ul>
+          <div className="copyright">
+            <span>Day nursery centre</span><span>&nbsp;©&nbsp;</span>
+            <span className="copyright-year">2020</span>
+            <span>.&nbsp;</span>
+            <a href="privacy-policy.html">Privacy Policy</a>
           </div>
         </div>
       </footer>

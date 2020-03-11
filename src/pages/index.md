@@ -2,8 +2,9 @@
 templateKey: index-page
 title: Great coffee with a conscience
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+video: /img/video-bg.mp4
+heading: innovative methods
+subheading: OUR CENTER USES THE MOST INNOVATIVE METHODS OF LEARNING THAT SUPPORT CREATIVITY AND INQUIRY
 mainpitch:
   title: Why Kaldi
   description: >
@@ -16,9 +17,15 @@ description: >-
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
+backgrounds:
+  nodes:    
+    - /img/page-1_slide01.jpg 
+    - /img/page-1_slide02.jpg
+    - /img/page-1_slide03.jpg  
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/home-1-1025x664.jpg
+      heading: Who we are
       text: >
         We sell green and roasted coffee beans that are sourced directly from
         independent farmers and farm cooperatives. We’re proud to offer a
@@ -26,12 +33,14 @@ intro:
         local communities. Check our post or contact us directly for current
         availability.
     - image: /img/coffee-gear.png
+      heading: Who we are
       text: >
         We offer a small, but carefully curated selection of brewing gear and
         tools for every taste and experience level. No matter if you roast your
         own beans or just bought your first french press, you’ll find a gadget
         to fall in love with in our shop.
     - image: /img/tutorials.png
+      heading: Who we are
       text: >
         Love a great cup of coffee, but never knew how to make one? Bought a
         fancy new Chemex but have no clue how to use it? Don't worry, we’re here
@@ -39,6 +48,7 @@ intro:
         to learn anything you want to know about coffee roasting and brewing.
         Email us or call the store for details.
     - image: /img/meeting-space.png
+      heading: Who we are
       text: >
         We believe that good coffee has the power to bring people together.
         That’s why we decided to turn a corner of our shop into a cozy meeting
@@ -60,11 +70,11 @@ main:
     optimal for the plants, farmers and the local environment.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    image: /img/home-1-1025x664.jpg
   image2:
     alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
+    image: /img/home-2-1025x664.jpg
   image3:
     alt: Coffee beans
-    image: /img/products-grid1.jpg
+    image: /img/home-3-1025x664.jpg  
 ---

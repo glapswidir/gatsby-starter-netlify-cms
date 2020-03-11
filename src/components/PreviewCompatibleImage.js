@@ -1,9 +1,9 @@
-import React from 'react'
+import React     from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import Img       from 'gatsby-image'
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: '5px' }
+  const imageStyle = { overflow: 'visible' }
   const { alt = '', childImageSharp, image } = imageInfo
 
   if (!!image && !!image.childImageSharp) {
