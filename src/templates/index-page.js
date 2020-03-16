@@ -17,13 +17,22 @@ export const IndexPageTemplate = ({
     return (
         <div className="has-navbar-fixed-top">
             <div className="hero">
-                <div className="hero-body" style={{minHeight: '700px'}}>
+                <div className="hero-body">
                     <BackgroundSlider query={{backgrounds}}/>
-                    <div className="columns center">
+                    <div className="columns find-babysitter">
                         <div className="column is-half is-offset-one-quarter">
-                            <div className="field">
+                            <div className="field has-addons">
+                                <div className="control is-expanded">
+                                    <input
+                                        className="input is-medium"
+                                        type="text"
+                                        placeholder="Enter suburb to search for babysitters in your area"
+                                    />
+                                </div>
                                 <div className="control">
-                                    <input className="input is-large" type="text" placeholder="Enter location"/>
+                                    <a className="button is-medium">
+                                        Find a babysitter
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -36,11 +45,11 @@ export const IndexPageTemplate = ({
                         <PreviewCompatibleImage imageInfo={main.image1}/>
                     </div>
                     <div className="cnt-block well-1 novi-background">
-                        <h2 className="is-size-1">Who we are</h2>
+                        <h2 className="is-size-2">Who we are</h2>
                         <hr/>
-                        <h4 className="is-size-4">We are a network of nursery centers providing learning and childcare
+                        <h4 className="is-size-6">We are a network of nursery centers providing learning and childcare
                             to 100+ children and support for their families.</h4>
-                        <Link className="button button-default" to="/products">Read more</Link>
+                        <Link className="button button-default" to="/about">Read more</Link>
                     </div>
                 </div>
             </section>
@@ -50,11 +59,11 @@ export const IndexPageTemplate = ({
                         <PreviewCompatibleImage imageInfo={main.image2}/>
                     </div>
                     <div className="cnt-block well-1 novi-background">
-                        <h2 className="is-size-1">Our values</h2>
+                        <h2 className="is-size-2">Our values</h2>
                         <hr/>
-                        <h4 className="is-size-4">Beauty, growth, development, and happiness are the foundation we use
+                        <h4 className="is-size-6">Beauty, growth, development, and happiness are the foundation we use
                             to guide our daily interactions and decision-making.</h4>
-                        <Link className="button button-default" to="/products">Read more</Link>
+                        <Link className="button button-default" to="/about">Read more</Link>
                     </div>
                 </div>
             </section>
@@ -64,49 +73,17 @@ export const IndexPageTemplate = ({
                         <PreviewCompatibleImage imageInfo={main.image3}/>
                     </div>
                     <div className="cnt-block well-1 novi-background is-uppercase">
-                        <h2 className="is-size-1 ">Why us?</h2>
+                        <h2 className="is-size-2">Why us?</h2>
                         <hr/>
-                        <h4 className="is-size-4">Discover why hundreds of families all over the USA pick our nursery
+                        <h4 className="is-size-6">Discover why hundreds of families all over the USA pick our nursery
                             center for their children.</h4>
-                        <Link className="button button-default" to="/products">Read more</Link>
+                        <Link className="button button-default" to="/about">Read more</Link>
                     </div>
                 </div>
             </section>
             <section className="well-2 center bg-vide novi-vide is-gapless">
-                <div
-                    style={{
-                        position: 'absolute',
-                        zIndex: 0,
-                        top: '0px',
-                        left: '0px',
-                        bottom: '0px',
-                        right: '0px',
-                        overflow: 'hidden',
-                        backgroundSize: 'cover',
-                        backgroundColor: 'transparent',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: '50% 50%',
-                        backgroundImage: 'none'
-                    }}
-                >
-                    <video
-                        className="video-player"
-                        loop
-                        muted
-                        autoPlay
-                        style={{
-                            margin: 'auto',
-                            position: 'absolute',
-                            zIndex: '-1',
-                            top: '45%',
-                            left: '50%',
-                            transform: 'translate(-50%, -50%)',
-                            visibility: 'visible',
-                            opacity: 1,
-                            width: 'auto',
-                            height: '1274px',
-                        }}
-                    >
+                <div className="video-container">
+                    <video className="video-player" loop muted autoPlay >
                         <source
                             src={video}
                             type="video/mp4"
@@ -114,17 +91,17 @@ export const IndexPageTemplate = ({
                     </video>
                 </div>
                 <div className="vide_cnt is-uppercase">
-                    <h2 className="is-size-1">{heading}</h2>
+                    <h2 className="is-size-2">{heading}</h2>
                     <hr/>
-                    <h3 className="is-size-5">{subheading}</h3>
+                    <h3 className="is-size-6">{subheading}</h3>
                 </div>
             </section>
-            <section className="well-4 bg-default novi-background bg-cover">
+            <section className="well-4 bg-default novi-background bg-cover is-uppercase">
                 <div className="container center">
-                    <h2 className="is-size-1 is-uppercase">Our Blog</h2>
+                    <h2 className="is-size-2">Our Blog</h2>
                     <hr/>
-                    <h4 className="is-size-6 is-uppercase">Read the latest news and updates from Day nursery centre.</h4>
-                    <div className="columns is-multiline">
+                    <h4 className="is-size-6">Read the latest news and updates from Day nursery centre.</h4>
+                    <div className="columns is-multiline offset-custom-2">
                         {posts && posts.map(({node: post}) => (
                             <article className="is-parent column is-4" key={post.id}>
                                 <Link className="post" to={post.fields.slug}>

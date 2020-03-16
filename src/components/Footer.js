@@ -1,14 +1,21 @@
-import React from 'react'
+import React               from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGoogle,
+  faFacebook,
+  faTwitter,
+  faPinterest,
+} from '@fortawesome/free-brands-svg-icons';
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-light has-text-grey">
+      <footer className="footer has-background-light is-uppercase">
         <div className="container center">
-          <h2 className="is-size-1 is-uppercase">Registration form</h2>
+          <h2 className="is-size-2">Registration form</h2>
           <hr/>
-          <h4 className="is-size-6 is-uppercase is-8">Feel free to send us a message or ask a question.</h4>
-          <div className="columns">
+          <h4 className="is-size-6 is-8 has-text-grey">Feel free to send us a message or ask a question.</h4>
+          <div className="columns offset-custom-2">
             <div className="column is-half">
               <div className="field">
                 <div className="control">
@@ -56,10 +63,18 @@ const Footer = class extends React.Component {
             <button className="button button-default" type="reset">Clear</button>
           </div>
           <ul className="inline-list">
-            <li><a className="icon icon-creative novi-icon fa fa-google-plus" href="#"></a></li>
-            <li><a className="icon icon-creative novi-icon fa fa-pinterest" href="#"></a></li>
-            <li><a className="icon icon-creative novi-icon fa fa-twitter" href="#"></a></li>
-            <li><a className="icon icon-creative novi-icon fa fa-facebook" href="#"></a></li>
+            <li>
+              <FontAwesomeIcon icon={faGoogle} className="icon icon-creative novi-icon"/>
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faTwitter} className="icon icon-creative novi-icon" />
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faFacebook} className="icon icon-creative novi-icon"/>
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faPinterest} className="icon icon-creative novi-icon"/>
+            </li>
           </ul>
           <div className="copyright">
             <span>Day nursery centre</span><span>&nbsp;©&nbsp;</span>

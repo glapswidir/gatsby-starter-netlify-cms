@@ -1,7 +1,6 @@
-import React from 'react'
+import React    from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo_new.svg'
+import logo     from '../img/logo-inverse-668x68.png';
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -9,6 +8,7 @@ const Navbar = class extends React.Component {
     this.state = {
       active: false,
       navBarActiveClass: '',
+      activeClass: 'top',
     }
   }
 
@@ -32,17 +32,30 @@ const Navbar = class extends React.Component {
     )
   }
 
+  scrollListener = () => {
+    const activeClass = (window.scrollY < 5) ? 'top' : 'normal';
+    this.setState({ activeClass });
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.scrollListener);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.scrollListener);
+  }
+
   render() {
     return (
         <nav
-            className="navbar is-fixed-top"
+            className={`navbar is-fixed-top ${this.state.activeClass}`}
             role="navigation"
             aria-label="main-navigation"
         >
           <div className="container">
             <div className="navbar-brand">
               <Link to="/" className="navbar-item" title="Logo">
-                <img src={logo} alt="Kaldi" style={{ width: '350px' }} />
+                <img src={logo} alt="" />
               </Link>
               {/* Hamburger menu */}
               <div
@@ -59,21 +72,18 @@ const Navbar = class extends React.Component {
                 id="navMenu"
                 className={`navbar-menu ${this.state.navBarActiveClass}`}
             >
-              <div className="navbar-start has-text-centered">
+              <div className="navbar-end">
                 <Link className="navbar-item" to="/about">
                   About
                 </Link>
                 <Link className="navbar-item" to="/products">
-                  Products
+                  Babysitters
                 </Link>
-                <Link className="navbar-item" to="/blog">
+                <Link className={`navbar-item ${this.state.navBarActiveClass}`} to="/blog">
                   Blog
                 </Link>
                 <Link className="navbar-item" to="/contact">
                   Contact
-                </Link>
-                <Link className="navbar-item" to="/contact/examples">
-                  Form Examples
                 </Link>
               </div>
             </div>
