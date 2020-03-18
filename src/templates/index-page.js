@@ -30,7 +30,7 @@ export const IndexPageTemplate = ({
                                     />
                                 </div>
                                 <div className="control">
-                                    <a className="button is-medium">
+                                    <a className="button is-medium" href="/">
                                         Find a babysitter
                                     </a>
                                 </div>

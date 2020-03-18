@@ -2,21 +2,10 @@ import React, {useState, useEffect} from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const ProductPageTemplate = ({
-                                        image,
-                                        title,
                                         heading,
                                         description,
-                                        intro,
-                                        main,
-                                        testimonials,
-                                        fullImage,
-                                        pricing,
                                     }) => {
     const [sitters, setSitters] = useState({results: [], info: {}})
     useEffect(() => {
@@ -67,14 +56,14 @@ export const ProductPageTemplate = ({
                                     <div className="card">
                                         <div className="card-image">
                                             <figure className="image is-4by3">
-                                                <img src={item.picture.large} alt="Placeholder image"/>
+                                                <img src={item.picture.large} alt={`Babystitter ${item.id.name}`}/>
                                             </figure>
                                         </div>
                                         <div className="card-content">
                                             <div className="media">
                                                 <div className="media-left">
                                                     <figure className="image is-48x48">
-                                                        <img src={item.picture.thumbnail} alt="Placeholder image"/>
+                                                        <img src={item.picture.thumbnail} alt={`Babystitter ${item.id.name}`} />
                                                     </figure>
                                                 </div>
                                                 <div className="media-content">
