@@ -3,13 +3,12 @@ import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
 
-export const ProductPageTemplate = ({
-                                        heading,
-                                        description,
-                                    }) => {
-    const [sitters, setSitters] = useState({results: [], info: {}})
+export const ProductPageTemplate = ({ heading, description }) => {
+    const search                = typeof window !== 'undefined' ? window.location.search : '?location=';
+    const location              = search.substr(search.indexOf("=") + 1);
+    const [sitters, setSitters] = useState({results: [], info: {}});
     useEffect(() => {
-        fetch(`https://randomuser.me/api/?results=20&gender=female&nat=us`)
+        fetch(`https://randomuser.me/api/?results=20&gender=female&nat=${location}`)
             .then(response => response.json())
             .then(resultData => {
                 setSitters(resultData)

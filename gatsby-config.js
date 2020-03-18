@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Trusted babysitters',
-    description:
-      '...',
+    description: '...',
+    siteURL: '...'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

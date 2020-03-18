@@ -106,22 +106,28 @@ body
 
 @import "~bulma"
 
+.navbar.top
+  background: transparent
+
 .navbar.normal
   background: #31383a
+
+.navbar-end
+  justify-content: flex-end
 
 .navbar > .container
   padding: 18px
 
 a.navbar-item
   color: #fff
-  font-size: 20px;
+  font-size: 20px
   font-stretch: 100%
   font-weight: 700
   text-transform: uppercase
   letter-spacing: 0.4px
 
 a.navbar-item:hover
-  color: #fff;
+  color: #fff
   background-color: transparent
 
 a.navbar-item::before
@@ -131,18 +137,15 @@ a.navbar-item::before
   right: -8px
   bottom: -20px
   border-bottom: 4px solid
-  pointer-events: none;
+  pointer-events: none
   opacity: 0
   transition: inherit
 
 a.navbar-item:hover::before
   opacity: 1
 
-.navbar.top
-  background: transparent
-
-.navbar-end
-  justify-content: flex-end
+a.navbar-item.active::before
+  opacity: 1
 
 hr
   display: inline-block

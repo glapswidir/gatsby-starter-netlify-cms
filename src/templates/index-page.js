@@ -21,20 +21,25 @@ export const IndexPageTemplate = ({
                     <BackgroundSlider query={{backgrounds}}/>
                     <div className="columns find-babysitter">
                         <div className="column is-half is-offset-one-quarter">
-                            <div className="field has-addons">
-                                <div className="control is-expanded">
-                                    <input
-                                        className="input is-medium"
-                                        type="text"
-                                        placeholder="Enter suburb to search for babysitters in your area"
-                                    />
+                            <form action="/products" >
+                                <div className="field has-addons">
+                                    <div className="control is-expanded">
+                                        <input
+                                            name="location"
+                                            className="input is-medium"
+                                            type="text"
+                                            placeholder="Enter suburb to search for babysitters in your area"
+                                        />
+                                    </div>
+                                    <div className="control">
+                                        <input
+                                            className="button is-medium"
+                                            type="submit"
+                                            value="Find a babysitter"
+                                        />
+                                    </div>
                                 </div>
-                                <div className="control">
-                                    <a className="button is-medium" href="/">
-                                        Find a babysitter
-                                    </a>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

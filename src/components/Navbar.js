@@ -1,14 +1,15 @@
-import React    from 'react'
-import { Link } from 'gatsby'
-import logo     from '../img/logo-inverse-668x68.png';
+import React     from 'react'
+import { Link }  from 'gatsby'
+import logo      from '../img/logo-inverse-668x68.png';
 
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      pathname: props.pathname,
       active: false,
       navBarActiveClass: '',
-      activeClass: 'top',
+      activeClass: (props.pathname === '/') ? 'top' : 'normal',
     }
   }
 
@@ -34,11 +35,13 @@ const Navbar = class extends React.Component {
 
   scrollListener = () => {
     const activeClass = (window.scrollY < 5) ? 'top' : 'normal';
-    this.setState({ activeClass });
-  }
+    this.setState({activeClass});
+  };
 
   componentDidMount() {
-    window.addEventListener('scroll', this.scrollListener);
+    if (this.state.pathname === '/') {
+      window.addEventListener('scroll', this.scrollListener);
+    }
   }
 
   componentWillUnmount() {
@@ -76,16 +79,16 @@ const Navbar = class extends React.Component {
                 className={`navbar-menu ${this.state.navBarActiveClass}`}
             >
               <div className="navbar-end">
-                <Link className="navbar-item" to="/about">
+                <Link className={`navbar-item ${this.state.pathname === '/about' ? 'active' : ''}`} to="/about">
                   About
                 </Link>
-                <Link className="navbar-item" to="/products">
+                <Link className={`navbar-item ${this.state.pathname === '/products' ? 'active' : ''}`} to="/products">
                   Babysitters
                 </Link>
-                <Link className={`navbar-item ${this.state.navBarActiveClass}`} to="/blog">
+                <Link className={`navbar-item ${this.state.pathname === '/blog' ? 'active' : ''}`} to="/blog">
                   Blog
                 </Link>
-                <Link className="navbar-item" to="/contact">
+                <Link className={`navbar-item ${this.state.pathname === '/contact' ? 'active' : ''}`} to="/contact">
                   Contact
                 </Link>
               </div>
